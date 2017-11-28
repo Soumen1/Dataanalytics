@@ -1,0 +1,70 @@
+
+#basic
+x<-rnorm(100)
+y<-rnorm(100)
+df1<-data.frame(x,y)
+
+http://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+
+#download file
+http://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip
+Year = Date.Year([Date])
+
+#1st program
+plot(dataset$GBP)
+
+#2nd
+plot(dataset$GBP)
+x<-rnorm(100)
+plot(x)
+
+#3rd
+library(ggplot2)
+qplot(carat,data = diamonds, geom = "histogram", fill = color)
+
+#4th
+library(ggplot2)
+qplot(Sepal.Length, Petal.Length,data = iris, color = Species)
+
+#5th
+install.packages("corrplot")
+
+#correlation
+plot(dataset$GBP,dataset$Date)
+library(corrplot)
+c1<-data.frame(dataset$GBP,dataset$USD,dataset$AUD,dataset$DKK,dataset$HKD)
+
+corrplot(cor(c1))
+
+#forecast
+c1<-data.frame(dataset$GBP)
+library(forecast)
+fitm<-auto.arima(c1[c(1:100),c(1)])
+plot(forecast(fitm.h=10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------R script-----------------------------------------------
+dataset <- read.csv("C:/Users/Aspire/Downloads/eurofxref-hist.csv", header=True)
+dataset <-data.frame(dataset$GBP,dataset$USD,dataset$AUD,dataset$DKK,dataset$HKD)
+c1<-dataset
+library(corrplot)
+corrplot(cor(c1))
+
